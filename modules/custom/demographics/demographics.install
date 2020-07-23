@@ -1,0 +1,62 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ *
+ * Create table to store user demographics data
+ */
+function demographics_schema() {
+  $schema['user_demographics'] = [
+    'description' => 'Stores demographics details of users.',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'Primary Key.',
+      ],
+      'age' => [
+        'type' => 'int',
+        'size' => 'tiny',
+        'description' => 'Age of the user',
+      ],
+      'age_declined' => [
+        'type' => 'varchar',
+        'length' => 5,
+        'description' => 'Whether user declined age',
+      ],
+      'gender' => [
+        'type' => 'varchar',
+        'length' => 20,
+        'description' => 'Gender of the user',
+      ],
+	  'gender_declined' => [
+        'type' => 'varchar',
+        'length' => 5,
+        'description' => 'Whether user declined gender',
+      ],
+	  'zipcode' => [
+        'type' => 'varchar',
+        'length' => 10,
+        'description' => 'Zipcode of the user',
+      ],
+	  'zipcode_declined' => [
+        'type' => 'varchar',
+        'length' => 5,
+        'description' => 'Whether user declined zipcode',
+      ],
+	  'decline_all' => [
+        'type' => 'varchar',
+        'length' => 5,
+        'description' => 'Whether user declined all',
+      ],
+	  'timestamp' => [
+        'type' => 'varchar',
+        'length' => 20,
+        'description' => 'Timestamp of user interaction',
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}

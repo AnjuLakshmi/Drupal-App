@@ -1,0 +1,7 @@
+demographics.save:
+  path: '/save-demographics'
+  defaults:
+    _controller: '\Drupal\demographics\Controller\DemographicsController::saveDemographics'
+    _title: 'Save Demo Test2'
+  requirements:
+    _permission: 'access content'

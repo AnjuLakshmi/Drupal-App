@@ -1,0 +1,5 @@
+name: Bewell Demographics
+type: module
+description: 'Captures user demographics'
+package: Bewell Custom
+core_version_requirement: ^8 || ^9
